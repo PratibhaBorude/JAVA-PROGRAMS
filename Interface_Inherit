@@ -1,0 +1,32 @@
+interface A{
+     void A1();
+     void A2();
+}
+interface B extends A{
+    void B1();
+    void B2();
+}
+class C implements B{
+    public void A1(){
+        System.out.println("Child1");
+    }
+    public void A2(){
+        System.out.println("Child2");
+    }
+    public void B1(){
+        System.out.println("Parent1");
+    }
+    public void B2(){
+        System.out.println("Parent2");
+    }
+
+}
+public class Interface_Inheritance {
+    public static void main(String[]args){
+         C CLASS=new C();
+         CLASS.A1();
+         CLASS.A2();
+         CLASS.B1();
+         CLASS.B2();
+    }
+}
